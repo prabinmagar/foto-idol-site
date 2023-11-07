@@ -1,0 +1,30 @@
+.login,
+.register,
+.forgot-password,
+.reset-password,
+.login-with-otp {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  input {
+    @apply focus:bg-white focus:px-4 default-transition;
+  }
+
+  .containers {
+    max-width: 1080px;
+  }
+
+  & > .containers:not(.auth-footer){
+    min-height: calc(100vh - 200px);
+  }
+}
+.active-link {
+  @apply bg-moonstone rounded-lg text-white shadow-button;
+}
+
+.form-element {
+  @apply default-transition;
+  &:has(input:focus) {
+    border-bottom-color: rgba(51, 51, 51, 0.5);
+  }
+}

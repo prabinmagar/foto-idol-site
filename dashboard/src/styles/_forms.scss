@@ -1,0 +1,43 @@
+.login,
+.register,
+.forgot-password,
+.reset-password,
+.login-with-otp {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f6;
+  input {
+    @apply focus:bg-white focus:px-4 default-transition;
+  }
+
+  .containers {
+    @apply max-w-[992px] w-[95%];
+  }
+}
+
+.tilted-box {
+  @apply relative;
+
+  &::after {
+    @apply content-[''] absolute left-0 top-0 w-full h-full z-0 -rotate-[5deg] rounded-xl;
+    @extend .bg-blue-gradient;
+  }
+
+  * {
+    @apply relative z-10;
+  }
+}
+
+.active-link {
+  @apply bg-moonstone rounded-lg text-white;
+  height: 100%;
+}
+
+.form-element {
+  @apply default-transition;
+  &:has(input:focus) {
+    border-bottom-color: rgba(51, 51, 51, 0.5);
+  }
+}
+
